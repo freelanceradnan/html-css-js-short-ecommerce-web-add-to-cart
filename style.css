@@ -15,9 +15,9 @@ nav{
     width:100%;
     padding:20px 9%;
     background-color: #fff;
-    box-shadow: 0 2px 10px (0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
@@ -83,4 +83,90 @@ nav .cart-icon{
     display: block;
     font-weight: bold;
     margin-top:5px;
+}
+.product-detail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:40px;
+    padding:130px 9% 30px;
+}
+.product-detail .product-img{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap:12px;
+    height:550px;
+}
+.product-detail .product-img img{
+    display: block;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.product-detail .thumbnail-list{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+}
+.product-detail .thumbnail-list img{
+    height: calc(100% / 4 - 9px);
+    cursor:pointer;
+}
+.product-detail .title{
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.product-detail .rating i{
+    color:#e35f26;
+}
+.product-detail .price{
+    display: block;
+    font-size:25px;
+    font-weight: 600;
+    margin:20px 0;
+}
+.product-detail :is(.size-selection, .color-section){
+    margin:20px 0;
+}
+.product-detail :is(.size-selection p, .color-selection p){
+    margin-bottom: 10px;
+}
+.product-detail .size-options,
+.product-detail .color-options{
+    display: flex;
+    gap:10px;
+}
+.product-detail .size-options button{
+    width:45px;
+    height: 45px;
+    background: #f2f2f2;
+    border:2px solid transparent;
+    cursor: pointer;
+}
+.product-detail .size-options button,
+.product-detail .color-options img{
+  width:75px;
+  height:75px;
+  border:2px solid transparent;
+  cursor: pointer;
+}
+.product-detail .size-options button.selected,
+.product-detail .color-options img.selected {
+    border-color: #333; 
+    background-color: #e3e3e3;
+}
+.btn{
+    padding:12px 50px ;
+    background-color: #222;
+    border:none;
+    font-size:16px;
+    color:#fff;
+    cursor:pointer
+}
+.product-detail .product-policy{
+    border-top: 1px solid #ccc;
+    padding-top:10px;
+}
+.product-detail .product-policy p{
+    margin: 3px 0;
 }
